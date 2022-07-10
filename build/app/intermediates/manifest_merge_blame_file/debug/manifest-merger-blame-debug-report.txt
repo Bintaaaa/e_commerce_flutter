@@ -1,0 +1,334 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.flutter_e_commerce"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="32" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/android/app/src/debug/AndroidManifest.xml:6:22-64
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-68
+15-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-65
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+16-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
+16-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-76
+17    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+17-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:28:5-82
+17-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:28:22-79
+18    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+18-->[com.google.android.gms:play-services-measurement-api:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1cd6b35bba78aa82ebfb4f3fdea2085f/jetified-play-services-measurement-api-21.0.0/AndroidManifest.xml:25:5-79
+18-->[com.google.android.gms:play-services-measurement-api:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1cd6b35bba78aa82ebfb4f3fdea2085f/jetified-play-services-measurement-api-21.0.0/AndroidManifest.xml:25:22-76
+19    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+19-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:26:5-110
+19-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:26:22-107
+20
+21    <application
+22        android:name="android.app.Application"
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.8.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/340f73096e343129323054dd621e22bf/core-1.8.0/AndroidManifest.xml:24:18-86
+24        android:debuggable="true"
+25        android:icon="@mipmap/ic_launcher"
+26        android:label="flutter_e_commerce" >
+27        <activity
+28            android:name="com.example.flutter_e_commerce.MainActivity"
+29            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+30            android:exported="true"
+31            android:hardwareAccelerated="true"
+32            android:launchMode="singleTop"
+33            android:requestLegacyExternalStorage="true"
+34            android:theme="@style/LaunchTheme"
+35            android:windowSoftInputMode="adjustResize" >
+36
+37            <!--
+38                 Specifies an Android theme to apply to this Activity as soon as
+39                 the Android process has started. This theme is visible to the user
+40                 while the Flutter UI initializes. After that, this theme continues
+41                 to determine the Window background behind the Flutter UI.
+42            -->
+43            <meta-data
+44                android:name="io.flutter.embedding.android.NormalTheme"
+45                android:resource="@style/NormalTheme" />
+46
+47            <intent-filter>
+48                <action android:name="android.intent.action.MAIN" />
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+51            </intent-filter>
+52        </activity>
+53        <!--
+54             Don't delete the meta-data below.
+55             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+56        -->
+57        <meta-data
+58            android:name="flutterEmbedding"
+59            android:value="2" />
+60
+61        <service
+61-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-15:72
+62            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+62-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-107
+63            android:exported="false"
+63-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+64            android:permission="android.permission.BIND_JOB_SERVICE" />
+64-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-69
+65        <service
+65-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-22:19
+66            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+66-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-97
+67            android:exported="false" >
+67-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+68            <intent-filter>
+68-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-21:29
+69                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+69-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:20:17-78
+69-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:20:25-75
+70            </intent-filter>
+71        </service>
+72
+73        <receiver
+73-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:24:9-31:20
+74            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+74-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:25:13-98
+75            android:exported="true"
+75-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-36
+76            android:permission="com.google.android.c2dm.permission.SEND" >
+76-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:27:13-73
+77            <intent-filter>
+77-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:28:13-30:29
+78                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+78-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:29:17-81
+78-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:29:25-78
+79            </intent-filter>
+80        </receiver>
+81
+82        <service
+82-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:33:9-37:19
+83            android:name="com.google.firebase.components.ComponentDiscoveryService"
+83-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:33:18-89
+84            android:directBootAware="true"
+84-->[com.google.firebase:firebase-common:20.1.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/0f67b2d2737c37bf1274c8f8df4996b1/jetified-firebase-common-20.1.1/AndroidManifest.xml:35:13-43
+85            android:exported="false" >
+85-->[com.google.firebase:firebase-analytics-ktx:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/102559266674f08e4b80b4bb6fb82abc/jetified-firebase-analytics-ktx-21.0.0/AndroidManifest.xml:10:13-37
+86            <meta-data
+86-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:34:13-36:85
+87                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+87-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:35:17-128
+88                android:value="com.google.firebase.components.ComponentRegistrar" />
+88-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:36:17-82
+89            <meta-data
+89-->[:firebase_core] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+90                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+90-->[:firebase_core] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+91                android:value="com.google.firebase.components.ComponentRegistrar" />
+91-->[:firebase_core] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+92            <meta-data
+92-->[com.google.firebase:firebase-analytics-ktx:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/102559266674f08e4b80b4bb6fb82abc/jetified-firebase-analytics-ktx-21.0.0/AndroidManifest.xml:11:13-13:85
+93                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
+93-->[com.google.firebase:firebase-analytics-ktx:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/102559266674f08e4b80b4bb6fb82abc/jetified-firebase-analytics-ktx-21.0.0/AndroidManifest.xml:12:17-126
+94                android:value="com.google.firebase.components.ComponentRegistrar" />
+94-->[com.google.firebase:firebase-analytics-ktx:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/102559266674f08e4b80b4bb6fb82abc/jetified-firebase-analytics-ktx-21.0.0/AndroidManifest.xml:13:17-82
+95            <meta-data
+95-->[com.google.firebase:firebase-common-ktx:20.1.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3921147b7d5349b5812607a66169cf18/jetified-firebase-common-ktx-20.1.1/AndroidManifest.xml:15:13-17:85
+96                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+96-->[com.google.firebase:firebase-common-ktx:20.1.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3921147b7d5349b5812607a66169cf18/jetified-firebase-common-ktx-20.1.1/AndroidManifest.xml:16:17-113
+97                android:value="com.google.firebase.components.ComponentRegistrar" />
+97-->[com.google.firebase:firebase-common-ktx:20.1.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3921147b7d5349b5812607a66169cf18/jetified-firebase-common-ktx-20.1.1/AndroidManifest.xml:17:17-82
+98            <meta-data
+98-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:55:13-57:85
+99                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+99-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:56:17-119
+100                android:value="com.google.firebase.components.ComponentRegistrar" />
+100-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:57:17-82
+101            <meta-data
+101-->[com.google.firebase:firebase-datatransport:18.1.4] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/9b1f21c841cab910306b02ae6f312da5/jetified-firebase-datatransport-18.1.4/AndroidManifest.xml:28:13-30:85
+102                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+102-->[com.google.firebase:firebase-datatransport:18.1.4] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/9b1f21c841cab910306b02ae6f312da5/jetified-firebase-datatransport-18.1.4/AndroidManifest.xml:29:17-115
+103                android:value="com.google.firebase.components.ComponentRegistrar" />
+103-->[com.google.firebase:firebase-datatransport:18.1.4] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/9b1f21c841cab910306b02ae6f312da5/jetified-firebase-datatransport-18.1.4/AndroidManifest.xml:30:17-82
+104            <meta-data
+104-->[com.google.android.gms:play-services-measurement-api:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1cd6b35bba78aa82ebfb4f3fdea2085f/jetified-play-services-measurement-api-21.0.0/AndroidManifest.xml:31:13-33:85
+105                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+105-->[com.google.android.gms:play-services-measurement-api:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1cd6b35bba78aa82ebfb4f3fdea2085f/jetified-play-services-measurement-api-21.0.0/AndroidManifest.xml:32:17-139
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->[com.google.android.gms:play-services-measurement-api:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1cd6b35bba78aa82ebfb4f3fdea2085f/jetified-play-services-measurement-api-21.0.0/AndroidManifest.xml:33:17-82
+107            <meta-data
+107-->[com.google.firebase:firebase-installations:17.0.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/5c0bcaf225cb7771e65a14163b1c7474/jetified-firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
+108                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+108-->[com.google.firebase:firebase-installations:17.0.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/5c0bcaf225cb7771e65a14163b1c7474/jetified-firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
+109                android:value="com.google.firebase.components.ComponentRegistrar" />
+109-->[com.google.firebase:firebase-installations:17.0.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/5c0bcaf225cb7771e65a14163b1c7474/jetified-firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
+110        </service>
+111
+112        <provider
+112-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:39:9-43:38
+113            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+113-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:40:13-102
+114            android:authorities="com.example.flutter_e_commerce.flutterfirebasemessaginginitprovider"
+114-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:41:13-88
+115            android:exported="false"
+115-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:42:13-37
+116            android:initOrder="99" />
+116-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:43:13-35
+117        <provider
+117-->[:image_picker_android] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
+118            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+118-->[:image_picker_android] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-82
+119            android:authorities="com.example.flutter_e_commerce.flutter.image_provider"
+119-->[:image_picker_android] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-74
+120            android:exported="false"
+120-->[:image_picker_android] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
+121            android:grantUriPermissions="true" >
+121-->[:image_picker_android] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
+122            <meta-data
+122-->[:image_picker_android] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:75
+123                android:name="android.support.FILE_PROVIDER_PATHS"
+123-->[:image_picker_android] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
+124                android:resource="@xml/flutter_image_picker_file_paths" />
+124-->[:image_picker_android] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-72
+125        </provider>
+126
+127        <uses-library
+127-->[androidx.window:window:1.0.0-beta04] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+128            android:name="androidx.window.extensions"
+128-->[androidx.window:window:1.0.0-beta04] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+129            android:required="false" />
+129-->[androidx.window:window:1.0.0-beta04] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+130        <uses-library
+130-->[androidx.window:window:1.0.0-beta04] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+131            android:name="androidx.window.sidecar"
+131-->[androidx.window:window:1.0.0-beta04] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+132            android:required="false" />
+132-->[androidx.window:window:1.0.0-beta04] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+133
+134        <receiver
+134-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:31:9-38:20
+135            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+135-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:32:13-78
+136            android:exported="true"
+136-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:33:13-36
+137            android:permission="com.google.android.c2dm.permission.SEND" >
+137-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:34:13-73
+138            <intent-filter>
+138-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:28:13-30:29
+139                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+139-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:29:17-81
+139-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:29:25-78
+140            </intent-filter>
+141        </receiver>
+142        <!--
+143             FirebaseMessagingService performs security checks at runtime,
+144             but set to not exported to explicitly avoid allowing another app to call it.
+145        -->
+146        <service
+146-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:44:9-51:19
+147            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+147-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:45:13-82
+148            android:directBootAware="true"
+148-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:46:13-43
+149            android:exported="false" >
+149-->[com.google.firebase:firebase-messaging:23.0.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1803d3b63472383bf4581973eb65830c/jetified-firebase-messaging-23.0.5/AndroidManifest.xml:47:13-37
+150            <intent-filter android:priority="-500" >
+150-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-21:29
+151                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+151-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:20:17-78
+151-->[:firebase_messaging] /Users/bijantyum/Productivity/Studies/AEJ Flutter/e_commerce_flutter/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:20:25-75
+152            </intent-filter>
+153        </service>
+154        <service
+154-->[com.google.android.datatransport:transport-backend-cct:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/02ff7f3f252eadac8710bf3b888f7d79/jetified-transport-backend-cct-3.1.5/AndroidManifest.xml:29:9-35:19
+155            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+155-->[com.google.android.datatransport:transport-backend-cct:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/02ff7f3f252eadac8710bf3b888f7d79/jetified-transport-backend-cct-3.1.5/AndroidManifest.xml:30:13-103
+156            android:exported="false" >
+156-->[com.google.android.datatransport:transport-backend-cct:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/02ff7f3f252eadac8710bf3b888f7d79/jetified-transport-backend-cct-3.1.5/AndroidManifest.xml:31:13-37
+157            <meta-data
+157-->[com.google.android.datatransport:transport-backend-cct:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/02ff7f3f252eadac8710bf3b888f7d79/jetified-transport-backend-cct-3.1.5/AndroidManifest.xml:32:13-34:39
+158                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+158-->[com.google.android.datatransport:transport-backend-cct:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/02ff7f3f252eadac8710bf3b888f7d79/jetified-transport-backend-cct-3.1.5/AndroidManifest.xml:33:17-94
+159                android:value="cct" />
+159-->[com.google.android.datatransport:transport-backend-cct:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/02ff7f3f252eadac8710bf3b888f7d79/jetified-transport-backend-cct-3.1.5/AndroidManifest.xml:34:17-36
+160        </service>
+161        <service
+161-->[com.google.android.datatransport:transport-runtime:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/afae4e8b6bafa4cc6aa50bb96cdf8e81/jetified-transport-runtime-3.1.5/AndroidManifest.xml:26:9-30:19
+162            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+162-->[com.google.android.datatransport:transport-runtime:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/afae4e8b6bafa4cc6aa50bb96cdf8e81/jetified-transport-runtime-3.1.5/AndroidManifest.xml:27:13-117
+163            android:exported="false"
+163-->[com.google.android.datatransport:transport-runtime:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/afae4e8b6bafa4cc6aa50bb96cdf8e81/jetified-transport-runtime-3.1.5/AndroidManifest.xml:28:13-37
+164            android:permission="android.permission.BIND_JOB_SERVICE" >
+164-->[com.google.android.datatransport:transport-runtime:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/afae4e8b6bafa4cc6aa50bb96cdf8e81/jetified-transport-runtime-3.1.5/AndroidManifest.xml:29:13-69
+165        </service>
+166
+167        <receiver
+167-->[com.google.android.datatransport:transport-runtime:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/afae4e8b6bafa4cc6aa50bb96cdf8e81/jetified-transport-runtime-3.1.5/AndroidManifest.xml:32:9-34:40
+168            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+168-->[com.google.android.datatransport:transport-runtime:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/afae4e8b6bafa4cc6aa50bb96cdf8e81/jetified-transport-runtime-3.1.5/AndroidManifest.xml:33:13-132
+169            android:exported="false" />
+169-->[com.google.android.datatransport:transport-runtime:3.1.5] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/afae4e8b6bafa4cc6aa50bb96cdf8e81/jetified-transport-runtime-3.1.5/AndroidManifest.xml:34:13-37
+170
+171        <provider
+171-->[com.google.firebase:firebase-common:20.1.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/0f67b2d2737c37bf1274c8f8df4996b1/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
+172            android:name="com.google.firebase.provider.FirebaseInitProvider"
+172-->[com.google.firebase:firebase-common:20.1.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/0f67b2d2737c37bf1274c8f8df4996b1/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
+173            android:authorities="com.example.flutter_e_commerce.firebaseinitprovider"
+173-->[com.google.firebase:firebase-common:20.1.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/0f67b2d2737c37bf1274c8f8df4996b1/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
+174            android:directBootAware="true"
+174-->[com.google.firebase:firebase-common:20.1.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/0f67b2d2737c37bf1274c8f8df4996b1/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43
+175            android:exported="false"
+175-->[com.google.firebase:firebase-common:20.1.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/0f67b2d2737c37bf1274c8f8df4996b1/jetified-firebase-common-20.1.1/AndroidManifest.xml:30:13-37
+176            android:initOrder="100" />
+176-->[com.google.firebase:firebase-common:20.1.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/0f67b2d2737c37bf1274c8f8df4996b1/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
+177
+178        <activity
+178-->[com.google.android.gms:play-services-base:18.0.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+179            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+179-->[com.google.android.gms:play-services-base:18.0.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+180            android:exported="false"
+180-->[com.google.android.gms:play-services-base:18.0.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+181            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+181-->[com.google.android.gms:play-services-base:18.0.1] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+182
+183        <receiver
+183-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:29:9-33:20
+184            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+184-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:30:13-85
+185            android:enabled="true"
+185-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:31:13-35
+186            android:exported="false" >
+186-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:32:13-37
+187        </receiver>
+188
+189        <service
+189-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:35:9-38:40
+190            android:name="com.google.android.gms.measurement.AppMeasurementService"
+190-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:36:13-84
+191            android:enabled="true"
+191-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:37:13-35
+192            android:exported="false" />
+192-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:38:13-37
+193        <service
+193-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:39:9-43:72
+194            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+194-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:40:13-87
+195            android:enabled="true"
+195-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:41:13-35
+196            android:exported="false"
+196-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:42:13-37
+197            android:permission="android.permission.BIND_JOB_SERVICE" />
+197-->[com.google.android.gms:play-services-measurement:21.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/3b1d1e5571522f703c316a9309413648/jetified-play-services-measurement-21.0.0/AndroidManifest.xml:43:13-69
+198
+199        <meta-data
+199-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/4a1e8147c3db656939cfc830651ce63e/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+200            android:name="com.google.android.gms.version"
+200-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/4a1e8147c3db656939cfc830651ce63e/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+201            android:value="@integer/google_play_services_version" />
+201-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bijantyum/.gradle/caches/transforms-2/files-2.1/4a1e8147c3db656939cfc830651ce63e/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+202    </application>
+203
+204</manifest>
