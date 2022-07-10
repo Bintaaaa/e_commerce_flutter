@@ -1,4 +1,4 @@
-name: flutter_e_commerce
+name: e_commerce_flutter
 
 packages:
   - domains/**

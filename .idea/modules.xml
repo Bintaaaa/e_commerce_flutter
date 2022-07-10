@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/features/account/melos_account.iml" filepath="$PROJECT_DIR$/features/account/melos_account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/features/auth/melos_auth.iml" filepath="$PROJECT_DIR$/features/auth/melos_auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domains/authentication/melos_authentication.iml" filepath="$PROJECT_DIR$/domains/authentication/melos_authentication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shared_libraries/common/melos_common.iml" filepath="$PROJECT_DIR$/shared_libraries/common/melos_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shared_libraries/component/melos_component.iml" filepath="$PROJECT_DIR$/shared_libraries/component/melos_component.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shared_libraries/core/melos_core.iml" filepath="$PROJECT_DIR$/shared_libraries/core/melos_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shared_libraries/dependencies/melos_dependencies.iml" filepath="$PROJECT_DIR$/shared_libraries/dependencies/melos_dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/./melos_e_commerce_flutter.iml" filepath="$PROJECT_DIR$/./melos_e_commerce_flutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/features/home_page/melos_home_page.iml" filepath="$PROJECT_DIR$/features/home_page/melos_home_page.iml" />
+      <module fileurl="file://$PROJECT_DIR$/features/onboarding/melos_onboarding.iml" filepath="$PROJECT_DIR$/features/onboarding/melos_onboarding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domains/product/melos_product.iml" filepath="$PROJECT_DIR$/domains/product/melos_product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domains/profile/melos_profile.iml" filepath="$PROJECT_DIR$/domains/profile/melos_profile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resources/resources/melos_resources.iml" filepath="$PROJECT_DIR$/resources/resources/melos_resources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/melos_e_commerce_flutter.iml" filepath="$PROJECT_DIR$/melos_e_commerce_flutter.iml" />
+    </modules>
+  </component>
+</project>
