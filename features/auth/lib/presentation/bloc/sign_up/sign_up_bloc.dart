@@ -4,13 +4,13 @@ import 'package:common/utils/constants/app_constants.dart';
 import 'package:common/utils/error/failure_response.dart';
 import 'package:common/utils/state/view_data_state.dart';
 import 'package:dependencies/bloc/bloc.dart';
+import 'package:authentication/domain/usecases/cache_token_usecase.dart';
 
 class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
   final SignUpUseCase signUpUseCase;
-
-  SignUpBloc({
-    required this.signUpUseCase,
-  }) : super(
+  final CacheTokenUseCase cacheTokenUseCase;
+  SignUpBloc({required this.signUpUseCase, required this.cacheTokenUseCase})
+      : super(
           SignUpState(
             signUpState: ViewData.initial(),
           ),
@@ -107,10 +107,8 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
                 ),
               ),
             ),
-            (result) => emit(
-              SignUpState(
-                signUpState: ViewData.loaded(),
-              ),
+            (result) async => await cacheTokenUseCase.call(
+              result.token,
             ),
           );
         } else {

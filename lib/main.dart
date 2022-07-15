@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(
             create: (_) => SplashCubit(
               getOnBoardingStatusUseCase: sl(),
+              getTokenUsecase: sl(),
             )..initSplash(),
           )
         ], child: SplashScreen()),
@@ -61,6 +62,7 @@ class MyApp extends StatelessWidget {
                 builder: (_) => BlocProvider(
                   create: (_) => SignInBloc(
                     signInUseCase: sl(),
+                    cacheTokenUseCase: sl(),
                   ),
                   child: SignInScreen(),
                 ),
@@ -70,6 +72,7 @@ class MyApp extends StatelessWidget {
                 builder: (_) => BlocProvider(
                   create: (_) => SignUpBloc(
                     signUpUseCase: sl(),
+                    cacheTokenUseCase: sl(),
                   ),
                   child: SignUpScreen(),
                 ),

@@ -4,13 +4,15 @@ import 'package:common/utils/state/view_data_state.dart';
 import 'package:common/utils/use_case/use_case.dart';
 import 'package:dependencies/bloc/bloc.dart';
 import 'package:onboarding/presentation/bloc/splash_bloc/splash_state.dart';
+import 'package:authentication/domain/usecases/get_token_usecase.dart';
 
 class SplashCubit extends Cubit<SplashState> {
   final GetOnBoardingStatusUseCase getOnBoardingStatusUseCase;
-
+  final GetTokenUsecase getTokenUsecase;
 
   SplashCubit({
     required this.getOnBoardingStatusUseCase,
+    required this.getTokenUsecase,
   }) : super(SplashState(splashState: ViewData.initial()));
 
   void initSplash() async {
@@ -26,12 +28,38 @@ class SplashCubit extends Cubit<SplashState> {
       ),
       (result) async {
         if (result) {
-          emit(
-            SplashState(
-              splashState: ViewData.loaded(
-                data: AppConstants.cachedKey.onBoardingKey,
+          final isTokenAvailable = await getTokenUsecase.call(
+            const NoParams(),
+          );
+          isTokenAvailable.fold(
+            (failure) => emit(
+              SplashState(
+                splashState: ViewData.error(
+                    message: failure.errorMessage, failure: failure),
               ),
             ),
+            (result) => {
+              if (result.isEmpty)
+                {
+                  emit(
+                    SplashState(
+                      splashState: ViewData.loaded(
+                        data: AppConstants.cachedKey.onBoardingKey,
+                      ),
+                    ),
+                  )
+                }
+              else
+                {
+                  emit(
+                    SplashState(
+                      splashState: ViewData.loaded(
+                        data: AppConstants.cachedKey.tokenKey,
+                      ),
+                    ),
+                  )
+                }
+            },
           );
         } else {
           emit(

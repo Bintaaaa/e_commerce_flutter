@@ -1,5 +1,6 @@
 import 'package:authentication/domain/entity/body/auth_request_entity.dart';
 import 'package:authentication/domain/usecases/sign_in_usecase.dart';
+import 'package:authentication/domain/usecases/cache_token_usecase.dart';
 import 'package:bloc/bloc.dart';
 import 'package:common/utils/constants/app_constants.dart';
 import 'package:common/utils/error/failure_response.dart';
@@ -12,8 +13,10 @@ part 'sign_in_state.dart';
 
 class SignInBloc extends Bloc<SignInEvent, SignInState> {
   final SignInUseCase signInUseCase;
+  final CacheTokenUseCase cacheTokenUseCase;
   SignInBloc({
     required this.signInUseCase,
+    required this.cacheTokenUseCase,
   }) : super(SignInState(signInState: ViewData.initial())) {
     on<UsernameChange>(
       (event, emit) => {
@@ -63,19 +66,16 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
           );
 
           result.fold(
-            (failure) => emit(
-              SignInState(
-                signInState: ViewData.error(
-                    message: AppConstants.errorMessage.formNotEmpty,
-                    failure: failure),
-              ),
-            ),
-            (data) => emit(
-              SignInState(
-                signInState: ViewData.loaded(),
-              ),
-            ),
-          );
+              (failure) => emit(
+                    SignInState(
+                      signInState: ViewData.error(
+                          message: AppConstants.errorMessage.formNotEmpty,
+                          failure: failure),
+                    ),
+                  ),
+              (data) async => await cacheTokenUseCase.call(
+                    data.token,
+                  ));
         } else {
           SignInState(
             signInState: ViewData.error(

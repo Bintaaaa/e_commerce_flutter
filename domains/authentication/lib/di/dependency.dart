@@ -3,7 +3,9 @@ import 'package:authentication/data/mapper/authentication_mapper.dart';
 import 'package:authentication/data/repository/authentication_repository_impl.dart';
 import 'package:authentication/domain/repository/authentication_repository.dart';
 import 'package:authentication/domain/usecases/cache_onboarding_usecase.dart';
+import 'package:authentication/domain/usecases/cache_token_usecase.dart';
 import 'package:authentication/domain/usecases/get_onboarding_status_usecase.dart';
+import 'package:authentication/domain/usecases/get_token_usecase.dart';
 import 'package:authentication/domain/usecases/sign_in_usecase.dart';
 import 'package:authentication/domain/usecases/sign_up_usecase.dart';
 import 'package:dependencies/get_it/get_it.dart';
@@ -64,6 +66,16 @@ class AuthenticationDependency {
     );
     sl.registerLazySingleton<SignInUseCase>(
       () => SignInUseCase(
+        authenticationRepository: sl(),
+      ),
+    );
+    sl.registerLazySingleton<CacheTokenUseCase>(
+      () => CacheTokenUseCase(
+        authenticationRepository: sl(),
+      ),
+    );
+    sl.registerLazySingleton<GetTokenUsecase>(
+      () => GetTokenUsecase(
         authenticationRepository: sl(),
       ),
     );

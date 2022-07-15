@@ -81,4 +81,33 @@ class AuthenticationRepositoryImpl implements AuthenticationRepository {
       );
     }
   }
+
+  @override
+  Future<Either<FailureResponse, bool>> cacheToken(
+      {required String token}) async {
+    try {
+      await authenticationLocalDataSources.cacheToken(token: token);
+      return const Right(true);
+    } on Exception catch (error) {
+      return Left(
+        FailureResponse(
+          errorMessage: error.toString(),
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<Either<FailureResponse, String>> getToken() async {
+    try {
+      final response = await authenticationLocalDataSources.getToken();
+      return Right(response);
+    } on Exception catch (error) {
+      return Left(
+        FailureResponse(
+          errorMessage: error.toString(),
+        ),
+      );
+    }
+  }
 }

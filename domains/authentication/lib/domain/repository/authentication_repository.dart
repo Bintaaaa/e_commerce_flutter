@@ -15,4 +15,8 @@ abstract class AuthenticationRepository {
 
   Future<Either<FailureResponse, AuthResponseEntity>> sighnUp(
       {required AuthRequestEntity authRequestEntity});
+
+  Future<Either<FailureResponse, bool>> cacheToken({required String token});
+
+  Future<Either<FailureResponse, String>> getToken();
 }
