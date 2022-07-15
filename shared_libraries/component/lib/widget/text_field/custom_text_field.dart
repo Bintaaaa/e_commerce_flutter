@@ -58,7 +58,7 @@ class CustomTextField extends StatelessWidget {
                     child: TextField(
                       controller: controller,
                       keyboardType: textInputType,
-                      obscureText: obscureText ? isSecure : obscureText,
+                      obscureText: isSecure,
                       onChanged: onChanged,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -91,8 +91,8 @@ class CustomTextField extends StatelessWidget {
                       highlightColor: Colors.transparent,
                       onPressed: () =>
                           context.read<CustomTextFieldCubit>().isSecureText(
-                            isSecured: isSecure,
-                          ),
+                                isSecured: isSecure,
+                              ),
                       icon: Icon(
                         isSecure ? Icons.remove_red_eye : Icons.visibility_off,
                       ),
@@ -102,9 +102,7 @@ class CustomTextField extends StatelessWidget {
             ),
             Text(
               errorText ?? "",
-              style: const TextStyle(
-                color: Colors.red
-              ),
+              style: const TextStyle(color: Colors.red),
             ),
           ],
         );

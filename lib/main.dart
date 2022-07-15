@@ -1,4 +1,8 @@
+import 'package:auth/presentation/bloc/sign_up/sign_up_bloc.dart';
+import 'package:auth/presentation/bloc/sign_in/sign_in_bloc.dart';
 import 'package:auth/presentation/ui/sign_in_screen.dart';
+import 'package:auth/presentation/ui/sign_up_screen.dart';
+import 'package:home_page/presentation/ui/home_screen.dart';
 import 'package:common/utils/navigation/navigation_helper.dart';
 import 'package:dependencies/bloc/bloc.dart';
 import 'package:dependencies/firebase/firebase.dart';
@@ -54,10 +58,30 @@ class MyApp extends StatelessWidget {
               );
             case AppRoutes.signIn:
               return MaterialPageRoute(
-                builder: (_) => const SignInScreen(),
+                builder: (_) => BlocProvider(
+                  create: (_) => SignInBloc(
+                    signInUseCase: sl(),
+                  ),
+                  child: SignInScreen(),
+                ),
+              );
+            case AppRoutes.signUp:
+              return MaterialPageRoute(
+                builder: (_) => BlocProvider(
+                  create: (_) => SignUpBloc(
+                    signUpUseCase: sl(),
+                  ),
+                  child: SignUpScreen(),
+                ),
+              );
+            case AppRoutes.home:
+              return MaterialPageRoute(
+                builder: (_) => const HomeScreen(),
               );
             default:
-              return MaterialPageRoute(builder: (_) => SplashScreen());
+              return MaterialPageRoute(
+                builder: (_) => SplashScreen(),
+              );
           }
         },
       ),

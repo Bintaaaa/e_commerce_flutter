@@ -1,5 +1,3 @@
-
-
 import 'package:common/utils/error/failure_response.dart';
 
 enum ViewState { initial, loading, error, hasData, noData }
