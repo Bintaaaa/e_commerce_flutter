@@ -66,16 +66,23 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
           );
 
           result.fold(
-              (failure) => emit(
-                    SignInState(
-                      signInState: ViewData.error(
-                          message: AppConstants.errorMessage.formNotEmpty,
-                          failure: failure),
-                    ),
-                  ),
-              (data) async => await cacheTokenUseCase.call(
-                    data.token,
-                  ));
+            (failure) => emit(
+              SignInState(
+                signInState: ViewData.error(
+                  message: AppConstants.errorMessage.formNotEmpty,
+                  failure: failure,
+                ),
+              ),
+            ),
+            (data) async => await cacheTokenUseCase.call(
+              data.token,
+            ),
+          );
+          emit(
+            SignInState(
+              signInState: ViewData.loaded(),
+            ),
+          );
         } else {
           SignInState(
             signInState: ViewData.error(
