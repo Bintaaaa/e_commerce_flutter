@@ -110,4 +110,18 @@ class AuthenticationRepositoryImpl implements AuthenticationRepository {
       );
     }
   }
+
+  @override
+  Future<Either<FailureResponse, bool>> removeUserData() async {
+    try {
+      final response = await authenticationLocalDataSources.removeUserData();
+      return Right(response);
+    } on Exception catch (error) {
+      return Left(
+        FailureResponse(
+          errorMessage: error.toString(),
+        ),
+      );
+    }
+  }
 }

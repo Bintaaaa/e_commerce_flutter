@@ -84,11 +84,13 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
             ),
           );
         } else {
-          SignInState(
-            signInState: ViewData.error(
-              message: AppConstants.errorMessage.formNotEmpty,
-              failure: FailureResponse(
-                errorMessage: AppConstants.errorMessage.formNotEmpty,
+          emit(
+            SignInState(
+              signInState: ViewData.error(
+                message: AppConstants.errorMessage.formNotEmpty,
+                failure: FailureResponse(
+                  errorMessage: AppConstants.errorMessage.formNotEmpty,
+                ),
               ),
             ),
           );

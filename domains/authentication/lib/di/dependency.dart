@@ -6,6 +6,8 @@ import 'package:authentication/domain/usecases/cache_onboarding_usecase.dart';
 import 'package:authentication/domain/usecases/cache_token_usecase.dart';
 import 'package:authentication/domain/usecases/get_onboarding_status_usecase.dart';
 import 'package:authentication/domain/usecases/get_token_usecase.dart';
+
+import 'package:authentication/domain/usecases/post_logout_usecase.dart';
 import 'package:authentication/domain/usecases/sign_in_usecase.dart';
 import 'package:authentication/domain/usecases/sign_up_usecase.dart';
 import 'package:dependencies/get_it/get_it.dart';
@@ -76,6 +78,11 @@ class AuthenticationDependency {
     );
     sl.registerLazySingleton<GetTokenUsecase>(
       () => GetTokenUsecase(
+        authenticationRepository: sl(),
+      ),
+    );
+    sl.registerLazySingleton<PostLogoutUsecase>(
+      () => PostLogoutUsecase(
         authenticationRepository: sl(),
       ),
     );

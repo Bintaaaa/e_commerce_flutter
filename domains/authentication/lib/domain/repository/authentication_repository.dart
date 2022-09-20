@@ -19,4 +19,5 @@ abstract class AuthenticationRepository {
   Future<Either<FailureResponse, bool>> cacheToken({required String token});
 
   Future<Either<FailureResponse, String>> getToken();
+  Future<Either<FailureResponse, bool>> removeUserData();
 }
