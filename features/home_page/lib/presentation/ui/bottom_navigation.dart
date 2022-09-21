@@ -1,4 +1,4 @@
-import 'package:account/presentation/ui/account.screen.dart';
+import 'package:account/presentation/ui/account_screen.dart';
 import 'package:dependencies/bloc/bloc.dart';
 import 'package:dependencies/flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';

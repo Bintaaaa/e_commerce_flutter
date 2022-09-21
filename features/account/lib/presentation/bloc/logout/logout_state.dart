@@ -6,7 +6,7 @@ class LogoutState extends Equatable {
     required this.logoutState,
   });
 
-  LogoutState copyWith({ViewData<bool>? loginState}) => LogoutState(
+  LogoutState copyWith({ViewData<bool>? logoutState}) => LogoutState(
         logoutState: logoutState ?? this.logoutState,
       );
 

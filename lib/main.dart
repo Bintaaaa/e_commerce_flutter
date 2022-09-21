@@ -1,5 +1,8 @@
+import 'package:account/presentation/bloc/edit_profile/edit_profile_bloc.dart';
 import 'package:account/presentation/bloc/logout/logout_cubit.dart';
+import 'package:account/presentation/bloc/update_photo/update_photo_cubit.dart';
 import 'package:account/presentation/bloc/user/user_cubit.dart';
+import 'package:account/presentation/ui/edit_profile_screen.dart';
 import 'package:auth/presentation/bloc/sign_in/sign_in_bloc.dart';
 import 'package:auth/presentation/bloc/sign_up/sign_up_bloc.dart';
 import 'package:auth/presentation/ui/sign_in_screen.dart';
@@ -112,6 +115,29 @@ class MyApp extends StatelessWidget {
                         create: (_) => LogoutCubit(postLogoutUsecase: sl())),
                   ],
                   child: const BottomNavigation(),
+                ),
+              );
+            case AppRoutes.editProfile:
+              return MaterialPageRoute(
+                builder: (_) => MultiBlocProvider(
+                  providers: [
+                    BlocProvider<EditProfileBloc>(
+                      create: (_) => EditProfileBloc(
+                        updateUserUsecase: sl(),
+                        firebaseMessaging: sl(),
+                      ),
+                    ),
+                    BlocProvider<UpdatePhotoCubit>(
+                      create: (_) => UpdatePhotoCubit(
+                        updateImageUsecase: sl(),
+                        imagePicker: sl(),
+                      ),
+                    ),
+                    BlocProvider<UserCubit>(
+                      create: (_) => UserCubit(getUserUsecase: sl())..getUSer(),
+                    ),
+                  ],
+                  child: EditProfileScreen(),
                 ),
               );
 
