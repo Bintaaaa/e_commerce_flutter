@@ -1,4 +1,6 @@
+import 'package:profile/data/model/request/user_request_dto.dart';
 import 'package:profile/data/model/response/user_response_dto.dart';
+import 'package:profile/domain/entity/request/user_request_entity.dart';
 import 'package:profile/domain/entity/response/user_entity_response.dart';
 
 class ProfileMapper {
@@ -10,5 +12,13 @@ class ProfileMapper {
         fullName: userDataDTO.fullName ?? '',
         city: userDataDTO.city ?? '',
         simpleAddress: userDataDTO.simpleAddress ?? '',
+      );
+
+  UserRequestDto mapUserEntityToDto(UserRequestEntity userRequestEntity) =>
+      UserRequestDto(
+        fullName: userRequestEntity.fullName,
+        simpleAddress: userRequestEntity.simpleAddress,
+        fcmToken: userRequestEntity.fcmToken,
+        fcmServerKey: userRequestEntity.fcmServerKey,
       );
 }

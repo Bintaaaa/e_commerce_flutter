@@ -4,6 +4,8 @@ import 'package:profile/data/mapper/user_mapper.dart';
 import 'package:profile/data/repository/profile_repository.dart';
 import 'package:profile/domain/repository/profile_repository.dart';
 import 'package:profile/domain/usecase/get_user_usecase.dart';
+import 'package:profile/domain/usecase/update_image_usecase.dart';
+import 'package:profile/domain/usecase/update_user_usecace.dart';
 
 class ProfileDepedency {
   ProfileDepedency() {
@@ -30,9 +32,21 @@ class ProfileDepedency {
         ),
       );
 
-  _registerUsecase() => sl.registerLazySingleton<GetUserUsecase>(
-        () => GetUserUsecase(
-          profileRepository: sl(),
-        ),
-      );
+  _registerUsecase() {
+    sl.registerLazySingleton<GetUserUsecase>(
+      () => GetUserUsecase(
+        profileRepository: sl(),
+      ),
+    );
+    sl.registerLazySingleton<UpdateUserUseCase>(
+      () => UpdateUserUseCase(
+        profileRepository: sl(),
+      ),
+    );
+    sl.registerLazySingleton<UpdateImageUsecase>(
+      () => UpdateImageUsecase(
+        profileRepository: sl(),
+      ),
+    );
+  }
 }
