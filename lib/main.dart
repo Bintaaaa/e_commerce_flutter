@@ -23,7 +23,6 @@ import 'package:onboarding/presentation/bloc/onboarding_bloc/onboarding_cubit.da
 import 'package:onboarding/presentation/bloc/splash_bloc/splash_cubit.dart';
 import 'package:onboarding/presentation/ui/on_boarding_screen.dart';
 import 'package:onboarding/presentation/ui/splash_screen.dart';
-
 import 'injections/injections.dart';
 
 void main() async {

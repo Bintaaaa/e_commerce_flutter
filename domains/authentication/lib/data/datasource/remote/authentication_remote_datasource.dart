@@ -13,6 +13,7 @@ class AuthenticationRemoteDataSourceImpl
     implements AuthenticationRemoteDataSource {
   final Dio dio;
   const AuthenticationRemoteDataSourceImpl({required this.dio});
+
   @override
   Future<AuthResponseDto> signIn(
       {required AuthRequestDto authRequestDto}) async {
